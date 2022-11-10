@@ -5,6 +5,13 @@ var capLetter = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P"
 var numbers = ["1","2","3","4","5","6","7","8","9","0"];
 var specialCharacters = ["!","@","#","$","%","&","*","?"];
 var passworCreated = []
+function getRandom(list) {
+  return list[ranpoint(0, list.length -1)]
+}
+
+function ranpoint(min,max){
+  return Math.floor(Math.random()*(max-min)+min);
+}
 
 function generatePassword(){
   var characters = window.prompt("how many characters")
@@ -14,19 +21,30 @@ function generatePassword(){
 var number = window.confirm("include numbers?");
 var capital = window.confirm("do you want to include capital letters?");
 var special = window.confirm("include special characters?");
-
-if(number === true)[
+var lowerCaseLet = window.confirm("do you want lower case?");
+if(number === true){
   passworCreated.push(numbers)
-]
-if(capital === true)[
-  passworCreated.push(capital)
-]
-if(special === true){
-  passworCreated.push(special);
+}
+  
+if(capital === true){
+  passworCreated.push(capLetter)
 }
 
+if(special === true){
+  passworCreated.push(specialCharacters)
+}
+if(lowerCaseLet === true){
+  passworCreated.push(lowerCase)
+}
 console.log(passworCreated);
-
+var createdPasscode = "";
+for (var i = 0;i < characterAnswer; i++){
+  var randomspot = getRandom(passworCreated);
+  var randomPass = getRandom(randomspot);
+  console.log(randomPass);
+  createdPasscode += randomPass
+}
+  return createdPasscode;
 }
 // Write password to the #password input
 function writePassword() {
