@@ -31,20 +31,42 @@ var capital = window.confirm("Would you like to include Capital Letters?");
 var special = window.confirm("Would you like to include special characters?");
 var lowerCaseLet = window.confirm("Would you like to include Lowercase Leters?");
 if(number === true){
-  passworCreated.push(numbers)
+  passworCreated.push(numbers);
 }
   if(lowerCaseLet === true){
-  passworCreated.push(lowerCasLetter)
+  passworCreated.push(lowerCasLetter);
 }
 if(capital === true){
-  passworCreated.push(capLetter)
+  passworCreated.push(capLetter);
 }
 if(special === true){
-  passworCreated.push(specialCharacters)
+  passworCreated.push(specialCharacters);
+}if
+(number && special === true){
+  passworCreated.push(numbers,specialCharacters);
 }
 if(lowerCaseLet && capital === true){
-  passworCreated.push(lowerCasLetter,capLetter)
+  passworCreated.push(lowerCasLetter,capLetter);
 }
+if
+(number && capital === true){
+  passworCreated.push(numbers,capLetter);
+}
+if
+(special && capital === true){
+  passworCreated.push(specialCharacters,capLetter);
+}
+if
+(special && lowerCaseLet === true){
+  passworCreated.push(specialCharacters,lowerCasLetter);
+}
+if
+(number && lowerCaseLet === true){
+  passworCreated.push(numbers,lowerCasLetter);
+}
+
+
+
 
 console.log(passworCreated);
 var createdPasscode = "";
